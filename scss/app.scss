@@ -1,0 +1,150 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "animations.scss";
+@import "components/header.scss";
+@import "components/home.scss";
+
+/* Any imports required multiple times across the site will be imported here. */
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand/QuicksandBook-Regular.woff2') format('woff2'),
+        url('../fonts/Quicksand/QuicksandBook-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Altone';
+    src: url('../fonts/Altone/AltoneTrial-Regular.woff2') format('woff2'),
+        url('../fonts/Altone/AltoneTrial-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Altone Bold';
+    src: url('../fonts/Altone/AltoneTrial-Bold.woff2') format('woff2'),
+        url('../fonts/Altone/AltoneTrial-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Any CSS beyond this point will be globally applied to the whole document. */
+/* CSS Reset */
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body,
+html {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: $beige;
+
+    a {
+        color: $brown;
+        text-decoration: none
+    }
+
+    button,
+    a,
+    input,
+    select {
+        @include font--primary();
+        @include input;
+    }
+    
+    h1 {
+        @include font--primary(800);
+        @include h1;
+    }
+    
+    h2 {
+        @include font--primary(800);
+        @include h2;
+    }
+    
+    h3 {
+        @include font--primary(800);
+        @include h3;
+    }
+    
+    h4 {
+        @include font--primary(800);
+        @include h4;
+    }
+    
+    p {
+        @include font--secondary();
+        @include paragraph;
+    }
+    
+    label {
+        @include font--secondary();
+        @include label;
+    }
+}
+
+.-scrollx {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

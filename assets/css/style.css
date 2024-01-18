@@ -1,0 +1,293 @@
+header > nav {
+  width: 100%;
+  background: #452913;
+}
+header > nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 1rem;
+}
+header > nav ul li a {
+  color: #3D563B;
+  font-weight: 800;
+  transition: 0.35s;
+}
+header > nav ul li a:hover {
+  color: #62926C;
+}
+header > nav ul li img {
+  max-width: 6rem;
+}
+header > nav ul li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+header > nav ul li:first-of-type {
+  margin-right: auto;
+}
+
+main .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+main .hero img {
+  position: absolute;
+  opacity: 0.7;
+  max-width: 100%;
+}
+main .hero video {
+  max-width: 100%;
+}
+main .hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  max-width: 80%;
+}
+main .hero > div h1 {
+  margin-bottom: 0;
+}
+main .hero > div h2 {
+  margin-bottom: 0.8rem;
+  display: flex;
+  font-family: Altone;
+  font-weight: 400;
+}
+main .hero > div h1, main .hero div h2, main .hero div p {
+  color: #FFE1B7;
+  text-align: center;
+}
+main .hero > div span {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  font-family: Altone Bold;
+}
+
+/* Any imports required multiple times across the site will be imported here. */
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand/QuicksandBook-Regular.woff2") format("woff2"), url("../fonts/Quicksand/QuicksandBook-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Altone";
+  src: url("../fonts/Altone/AltoneTrial-Regular.woff2") format("woff2"), url("../fonts/Altone/AltoneTrial-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Altone Bold";
+  src: url("../fonts/Altone/AltoneTrial-Bold.woff2") format("woff2"), url("../fonts/Altone/AltoneTrial-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Any CSS beyond this point will be globally applied to the whole document. */
+/* CSS Reset */
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+html {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #FFE1B7;
+}
+body a,
+html a {
+  color: #452913;
+  text-decoration: none;
+}
+body button,
+body a,
+body input,
+body select,
+html button,
+html a,
+html input,
+html select {
+  font-family: "Altone Bold";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  body button,
+  body a,
+  body input,
+  body select,
+  html button,
+  html a,
+  html input,
+  html select {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+body h1,
+html h1 {
+  font-family: "Altone Bold";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 42px;
+  line-height: 48px;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  body h1,
+  html h1 {
+    font-size: 30px;
+    line-height: 33px;
+  }
+}
+body h2,
+html h2 {
+  font-family: "Altone Bold";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 34px;
+  line-height: 36px;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  body h2,
+  html h2 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+body h3,
+html h3 {
+  font-family: "Altone Bold";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 28px;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  body h3,
+  html h3 {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+body h4,
+html h4 {
+  font-family: "Altone Bold";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 0.15rem;
+}
+@media screen and (max-width: 767px) {
+  body h4,
+  html h4 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+body p,
+html p {
+  font-family: "Quicksand";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  body p,
+  html p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+body label,
+html label {
+  font-family: "Quicksand";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  body label,
+  html label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.-scrollx {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.-scrollx::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

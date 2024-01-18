@@ -1,0 +1,35 @@
+header > nav {
+    width: 100%;
+    background: $brown;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.2rem 1rem;
+    }
+
+    ul li a {
+        color: $green;
+        font-weight: 800;
+        transition: $transition-fast;
+
+        &:hover {
+            color: $light-green;
+        }
+    }
+
+    ul li img {
+        max-width: 6rem;
+    }
+
+    ul li:not(:last-of-type) {
+        margin-right: 1rem;
+    }
+
+    ul li:first-of-type {
+        margin-right: auto;
+    }
+
+
+}
