@@ -148,3 +148,41 @@ html {
         display: none;
     }
 }
+
+#eQTlWSRvAGI6_to { 
+    animation: eQTlWSRvAGI6_to__to 15000ms linear infinite normal forwards
+}
+    
+@keyframes eQTlWSRvAGI6_to__to { 
+    0% {transform: translate(370.211271px,93.636803px)} 
+    100% {transform: translate(0.211271px,93.636803px)}
+} 
+
+#eQTlWSRvAGI14_to {
+    animation: eQTlWSRvAGI14_to__to 3000ms linear infinite normal forwards
+}
+@keyframes eQTlWSRvAGI14_to__to { 
+    0% {transform: translate(172.84121px,51px);animation-timing-function: cubic-bezier(0.445,0.05,0.55,0.95)} 
+    20% {transform: translate(172.84121px,47px);animation-timing-function: cubic-bezier(0.445,0.05,0.55,0.95)}
+    40% {transform: translate(172.84121px,51px)}
+    100% {transform: translate(172.84121px,51px)}
+} 
+
+#eQTlWSRvAGI23_to {
+    animation: eQTlWSRvAGI23_to__to 3000ms linear infinite normal forwards
+}
+@keyframes eQTlWSRvAGI23_to__to {
+    0% {transform: translate(101.669751px,110px);animation-timing-function: cubic-bezier(0.445,0.05,0.55,0.95)}
+    26.666667% {transform: translate(101.669751px,100px);animation-timing-function: cubic-bezier(0.445,0.05,0.55,0.95)}
+    60% {transform: translate(101.669751px,110px)} 100% {transform: translate(101.669751px,110px)}
+}
+
+#eQTlWSRvAGI27_to {
+    animation: eQTlWSRvAGI27_to__to 3000ms linear infinite normal forwards
+}
+@keyframes eQTlWSRvAGI27_to__to {
+    0% {transform: translate(231.32529px,110px);animation-timing-function: cubic-bezier(0.445,0.05,0.55,0.95)}
+    26.666667% {transform: translate(231.32529px,100px);animation-timing-function: cubic-bezier(0.445,0.05,0.55,0.95)} 
+    60% {transform: translate(231.32529px,110px)} 
+    100% {transform: translate(231.32529px,110px)}
+}

@@ -10,17 +10,17 @@ header > nav {
     }
 
     ul li a {
-        color: $green;
+        color: $beige;
         font-weight: 800;
         transition: $transition-fast;
 
         &:hover {
-            color: $light-green;
+            color: $light-beige;
         }
     }
 
-    ul li img {
-        max-width: 6rem;
+    ul li svg {
+        width: 7rem;
     }
 
     ul li:not(:last-of-type) {
@@ -30,6 +30,4 @@ header > nav {
     ul li:first-of-type {
         margin-right: auto;
     }
-
-
 }

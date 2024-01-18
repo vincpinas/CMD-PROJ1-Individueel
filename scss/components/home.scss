@@ -10,7 +10,7 @@ main {
         img {
             position: absolute;
             opacity: .7;
-            max-width: 100%;
+            width: 100%;
         }
     
         video {
@@ -34,6 +34,10 @@ main {
             display: flex;
             font-family: Altone;
             font-weight: 400;
+        }
+
+        & > div p {
+            font-weight: 600;
         }
 
         & > div h1, div h2, div p {
