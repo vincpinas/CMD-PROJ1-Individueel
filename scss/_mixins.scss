@@ -12,12 +12,6 @@
     font-style: $style;
 }
 
-@mixin font--tertiary($weight: 300, $style: normal) {
-    font-family: $font--tertiary;
-    font-weight: $weight;
-    font-style: $style;
-}
-
 @mixin font-size($size) {
     font-size: #{$size}px;
 }
