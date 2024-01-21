@@ -1,4 +1,4 @@
-main {
+#p-home {
 
     .hero {
         display: flex;
@@ -13,13 +13,13 @@ main {
             width: 100%;
             z-index: $index-2;
         }
-    
+
         video {
             max-width: 100%;
             z-index: $index-1;
         }
 
-        & > div {
+        &>div {
             z-index: $index-3;
             display: flex;
             flex-direction: column;
@@ -28,32 +28,75 @@ main {
             max-width: 80%;
         }
 
-        & > div h1{
+        &>div h1 {
             margin-bottom: 0;
         }
 
-        & > div h2 {
+        &>div h2 {
             margin-bottom: 0.8rem;
             display: flex;
             font-family: Altone;
             font-weight: 400;
         }
 
-        & > div p {
-            font-weight: 600;
-        }
-
-        & > div h1, div h2, div p {
+        &>div h1,
+        div h2,
+        div p {
             color: $beige;
             text-align: center;
         }
 
-        & > div span {
+        &>div span {
             margin-left: 0.2rem;
             margin-right: 0.2rem;
             font-family: Altone Bold;
         }
     }
 
+    .faq {
+        padding: 1rem;
 
+        h2>span {
+            display: inline-block;
+            transition: $transition-fast;
+            margin-right: 0.5rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        p {
+            max-width: 95%;
+            margin-left: 1.4rem;
+        }
+
+        p a {
+            margin: 0;
+            width: fit-content;
+        }
+
+        li {
+            p {
+                display: none;
+                opacity: 0;
+            }
+    
+            span {
+                transform: rotate(0deg);
+            }
+        }
+
+        li.active {
+            p {
+                display: inline-block;
+                opacity: 1;
+            }
+    
+            span {
+                transform: rotate(90deg);
+            }
+        }
+    }
 }

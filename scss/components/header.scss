@@ -1,6 +1,9 @@
 header > nav {
     width: 100%;
-    background: $brown;
+    background: $green;
+    z-index: $index-5;
+    position: relative;
+    box-shadow: $box-shadow--primary;
 
     ul {
         display: flex;
@@ -11,7 +14,7 @@ header > nav {
 
     ul li a {
         color: $beige;
-        font-weight: 800;
+        font-size: 14px;
         transition: $transition-fast;
 
         &:hover {

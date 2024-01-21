@@ -1,6 +1,17 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 header > nav {
   width: 100%;
-  background: #452913;
+  background: #3D563B;
+  z-index: 200;
+  position: relative;
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.48);
 }
 header > nav ul {
   display: flex;
@@ -10,7 +21,7 @@ header > nav ul {
 }
 header > nav ul li a {
   color: #FFE1B7;
-  font-weight: 800;
+  font-size: 14px;
   transition: 0.35s;
 }
 header > nav ul li a:hover {
@@ -26,24 +37,24 @@ header > nav ul li:first-of-type {
   margin-right: auto;
 }
 
-main .hero {
+#p-home .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
-main .hero img {
+#p-home .hero img {
   position: absolute;
   opacity: 0.7;
   width: 100%;
   z-index: 10;
 }
-main .hero video {
+#p-home .hero video {
   max-width: 100%;
   z-index: 1;
 }
-main .hero > div {
+#p-home .hero > div {
   z-index: 50;
   display: flex;
   flex-direction: column;
@@ -51,26 +62,131 @@ main .hero > div {
   position: absolute;
   max-width: 80%;
 }
-main .hero > div h1 {
+#p-home .hero > div h1 {
   margin-bottom: 0;
 }
-main .hero > div h2 {
+#p-home .hero > div h2 {
   margin-bottom: 0.8rem;
   display: flex;
   font-family: Altone;
   font-weight: 400;
 }
-main .hero > div p {
-  font-weight: 600;
-}
-main .hero > div h1, main .hero div h2, main .hero div p {
+#p-home .hero > div h1,
+#p-home .hero div h2,
+#p-home .hero div p {
   color: #FFE1B7;
   text-align: center;
 }
-main .hero > div span {
+#p-home .hero > div span {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
   font-family: Altone Bold;
+}
+#p-home .faq {
+  padding: 1rem;
+}
+#p-home .faq h2 > span {
+  display: inline-block;
+  transition: 0.35s;
+  margin-right: 0.5rem;
+}
+#p-home .faq h2 {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+#p-home .faq p {
+  max-width: 95%;
+  margin-left: 1.4rem;
+}
+#p-home .faq p a {
+  margin: 0;
+  width: fit-content;
+}
+#p-home .faq li p {
+  display: none;
+  opacity: 0;
+}
+#p-home .faq li span {
+  transform: rotate(0deg);
+}
+#p-home .faq li.active p {
+  display: inline-block;
+  opacity: 1;
+}
+#p-home .faq li.active span {
+  transform: rotate(90deg);
+}
+
+#p-tips {
+  padding: 1rem 0.5rem;
+}
+#p-tips h1 {
+  margin: 0;
+}
+
+#p-tips .tips button {
+  outline: none;
+  border: none;
+  background: none;
+}
+#p-tips .tips > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#p-tips .tips p, #p-tips .tips h3, #p-tips .tips a {
+  color: #FFE1B7;
+  margin: 0;
+}
+#p-tips .tips ol > li {
+  list-style-position: outside;
+  margin-left: 1em;
+}
+#p-tips .tips > ul > li {
+  box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.48);
+  background: #3D563B;
+  color: #FFE1B7;
+  padding: 0.4rem 0.75rem;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#p-tips .tips > ul > li > span {
+  display: flex;
+  width: 100%;
+}
+#p-tips .tips > ul > li > span button {
+  margin-left: auto;
+  width: fit-content;
+  margin-bottom: 0;
+}
+#p-tips .tips > ul > li > span button svg {
+  max-width: 2rem;
+  height: fit-content;
+}
+#p-tips .tips > ul > li > span button path {
+  fill: #FFE1B7;
+  stroke: #ffcc84;
+  transition: 0.35s;
+}
+#p-tips .tips > ul > li > span button.active path {
+  fill: #6f9e79;
+  stroke: #62926C;
+}
+#p-tips .tips > span {
+  display: flex;
+  justify-content: center;
+}
+#p-tips .tips > span button img {
+  width: 3rem;
+}
+#p-tips .tips > span button:disabled {
+  opacity: 0.6;
+}
+
+#tips-random {
+  margin-bottom: 1.5rem;
 }
 
 /* Any imports required multiple times across the site will be imported here. */
@@ -96,17 +212,10 @@ main .hero > div span {
   font-display: swap;
 }
 /* Any CSS beyond this point will be globally applied to the whole document. */
-/* CSS Reset */
-/* HTML5 display-role reset for older browsers */
 article,
-aside,
-details,
-figcaption,
 figure,
 footer,
 header,
-hgroup,
-menu,
 nav,
 section {
   display: block;
@@ -116,26 +225,8 @@ body {
   line-height: 0;
 }
 
-ol,
 ul {
   list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 * {
@@ -153,10 +244,15 @@ html {
   height: 100%;
   background: #FFE1B7;
 }
+body ol,
+html ol {
+  font-family: "Quicksand";
+  font-weight: 800;
+  font-style: normal;
+}
 body a,
 html a {
   color: #452913;
-  text-decoration: none;
 }
 body button,
 body a,
@@ -167,7 +263,7 @@ html a,
 html input,
 html select {
   font-family: "Altone Bold";
-  font-weight: 300;
+  font-weight: 800;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
@@ -182,7 +278,7 @@ html select {
   html a,
   html input,
   html select {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
   }
 }
@@ -194,6 +290,7 @@ html h1 {
   font-size: 42px;
   line-height: 48px;
   margin-bottom: 1.5rem;
+  color: #301D0D;
 }
 @media screen and (max-width: 767px) {
   body h1,
@@ -210,6 +307,7 @@ html h2 {
   font-size: 34px;
   line-height: 36px;
   margin-bottom: 1.5rem;
+  color: #301D0D;
 }
 @media screen and (max-width: 767px) {
   body h2,
@@ -226,11 +324,12 @@ html h3 {
   font-size: 26px;
   line-height: 28px;
   margin-bottom: 1.5rem;
+  color: #301D0D;
 }
 @media screen and (max-width: 767px) {
   body h3,
   html h3 {
-    font-size: 15px;
+    font-size: 19px;
     line-height: 28px;
   }
 }
@@ -242,6 +341,7 @@ html h4 {
   font-size: 22px;
   line-height: 28px;
   margin-bottom: 0.15rem;
+  color: #301D0D;
 }
 @media screen and (max-width: 767px) {
   body h4,
@@ -253,11 +353,12 @@ html h4 {
 body p,
 html p {
   font-family: "Quicksand";
-  font-weight: 300;
+  font-weight: 800;
   font-style: normal;
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 1rem;
+  color: #452913;
 }
 @media screen and (max-width: 767px) {
   body p,
@@ -269,11 +370,12 @@ html p {
 body label,
 html label {
   font-family: "Quicksand";
-  font-weight: 300;
+  font-weight: 800;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 1rem;
+  color: #452913;
 }
 @media screen and (max-width: 767px) {
   body label,

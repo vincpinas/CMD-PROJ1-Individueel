@@ -1,12 +1,12 @@
 @import "./Variables";
 
-@mixin font--primary($weight: 300, $style: normal) {
+@mixin font--primary($weight: 800, $style: normal) {
     font-family: $font--primary;
     font-weight: $weight;
     font-style: $style;
 }
 
-@mixin font--secondary($weight: 300, $style: normal) {
+@mixin font--secondary($weight: 800, $style: normal) {
     font-family: $font--secondary;
     font-weight: $weight;
     font-style: $style;

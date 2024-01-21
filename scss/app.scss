@@ -3,6 +3,7 @@
 @import "animations.scss";
 @import "components/header.scss";
 @import "components/home.scss";
+@import "components/tips.scss";
 
 /* Any imports required multiple times across the site will be imported here. */
 @font-face {
@@ -34,17 +35,10 @@
 
 
 /* Any CSS beyond this point will be globally applied to the whole document. */
-/* CSS Reset */
-/* HTML5 display-role reset for older browsers */
 article,
-aside,
-details,
-figcaption,
 figure,
 footer,
 header,
-hgroup,
-menu,
 nav,
 section {
     display: block;
@@ -54,27 +48,10 @@ body {
     line-height: 0;
 }
 
-ol,
 ul {
     list-style: none;
 }
 
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
 * {
     -moz-box-sizing: border-box;
@@ -91,9 +68,12 @@ html {
     height: 100%;
     background: $beige;
 
+    ol {
+        @include font--secondary();
+    }
+
     a {
         color: $brown;
-        text-decoration: none
     }
 
     button,
@@ -105,33 +85,39 @@ html {
     }
     
     h1 {
-        @include font--primary(800);
+        @include font--primary();
         @include h1;
+        color: $dark-brown
     }
     
     h2 {
-        @include font--primary(800);
+        @include font--primary();
         @include h2;
+        color: $dark-brown
     }
     
     h3 {
-        @include font--primary(800);
+        @include font--primary();
         @include h3;
+        color: $dark-brown
     }
     
     h4 {
-        @include font--primary(800);
+        @include font--primary();
         @include h4;
+        color: $dark-brown
     }
     
     p {
         @include font--secondary();
         @include paragraph;
+        color: $brown;
     }
     
     label {
         @include font--secondary();
         @include label;
+        color: $brown;
     }
 }
 

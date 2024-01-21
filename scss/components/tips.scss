@@ -1,0 +1,92 @@
+#p-tips {
+    padding: 1rem 0.5rem;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+$card-padding: 0.75rem;
+
+#p-tips .tips {
+    button {
+        outline: none;
+        border: none;
+        background: none;
+    }
+
+    & > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p, h3, a {
+        color: $beige;
+        margin: 0;
+    }
+
+    ol > li {
+        list-style-position: outside;
+        margin-left: 1em; 
+    }
+
+    & > ul > li {
+        box-shadow: $box-shadow--primary;
+        background: $green;
+        color: $beige;
+        padding: 0.4rem $card-padding;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        & > span {
+            display: flex;
+            width: 100%;
+        }
+
+        & > span button {
+            margin-left: auto;
+            width: fit-content;
+            margin-bottom: 0;
+        }
+        
+        & > span button svg {
+            max-width: 2rem;
+            height: fit-content;
+        }
+
+        & > span button path {
+            fill: $beige;
+            stroke: darken($beige, $amount: 10%);
+            transition: $transition-fast;
+        }
+
+        & > span button.active path {
+            fill: lighten($light-green, 5%);
+            stroke: $light-green;
+        }
+    }
+
+    & > span {
+        display: flex;
+        justify-content: center;
+
+        button img {
+            width: 3rem;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+        }
+    }
+}
+
+#tips-random {
+    margin-bottom: 1.5rem;
+}
+
+#tips-favorite {
+
+}
