@@ -193,6 +193,46 @@ header > nav ul li:first-of-type {
   color: #301D0D;
 }
 
+#p-winkels {
+  padding: 1rem 0.5rem;
+}
+
+#p-winkels > section > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#p-winkels > section > ul li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#p-winkels > section > ul li h3 {
+  margin: 0;
+}
+#p-winkels > section > ul li > img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 5px;
+}
+#p-winkels > section > ul li p {
+  margin: 0;
+}
+#p-winkels > section > ul li:nth-of-type(odd) {
+  flex-direction: row;
+}
+#p-winkels > section > ul li:nth-of-type(odd) > img {
+  margin-right: 0.5rem;
+}
+#p-winkels > section > ul li > div {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 /* Any imports required multiple times across the site will be imported here. */
 @font-face {
   font-family: "Quicksand";

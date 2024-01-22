@@ -61,6 +61,23 @@ const tips_content = [
         Zo kun je goedkoop boodschappen doen en tegelijkertijd in de strijd tegen voedselverspilling helpen.</p>
     </li>`,
     // ---------------------------
+    `<li>
+    <div>
+        <h3>Glazen flessen</h3>
+        <button>${heart_svg}</button>
+    </div>
+    <p>
+        In plaats van appelsap of ander drinken uit een pak te kopen is het aangeraden om glazen fles te kopen.
+        Niet alleen is dit beter voor het millieu, omdat je deze fles kan hergebruiken. Het is ook beter voor je gezondheid, omdat je 
+        alle microplastics die je bij een plastic pak erbij krijgt compleet vermijd.
+
+        <br>
+        <br>
+
+        Eenmalige glazen flessen scoren wel slechter dan een blikje of pak dus als je hem maar een keer gebruikt is het aangeraden
+        een andere verpakking te kiezen.
+    </p>
+    </li>`
 ]
 
 export {

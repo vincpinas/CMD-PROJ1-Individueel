@@ -149,12 +149,6 @@ Events
         else return false;
     }
 
-    favoritedIds() {
-        return this.storage.favorites.map(favorite => {
-            return favorite.index
-        })
-    }
-
     tipsLeft() {
         if(this.storage.favorites && this.storage.favorites.length >= tips_content.length) return false;
         else return true;
@@ -175,7 +169,7 @@ Events
             return this.random()
         } else {
             this.lastRandomIndex = rnd
-            return { index: rnd, tip: available_tips[rnd] }
+            return { index: tips_content.indexOf(available_tips[rnd]), tip: available_tips[rnd] }
         }
     }
 
