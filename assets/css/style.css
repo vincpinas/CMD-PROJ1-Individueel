@@ -162,8 +162,8 @@ header > nav ul li:first-of-type {
   margin-bottom: 0;
 }
 #p-tips .tips > ul > li:not(.info) > div button svg {
-  max-width: 2rem;
-  height: fit-content;
+  width: 2rem;
+  height: 2rem;
 }
 #p-tips .tips > ul > li:not(.info) > div button path {
   fill: #FFE1B7;
