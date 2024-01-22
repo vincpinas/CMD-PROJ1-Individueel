@@ -19,7 +19,7 @@
 @mixin h1 {
     @include font-size($font-size--h1);
     line-height: #{$line-height--h1}px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @media #{$mobile-down} {
         @include font-size($s-font-size--h1);
@@ -30,7 +30,7 @@
 @mixin h2 {
     @include font-size($font-size--h2);
     line-height: #{$line-height--h2}px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @media #{$mobile-down} {
         @include font-size($s-font-size--h2);
@@ -41,7 +41,7 @@
 @mixin h3 {
     @include font-size($font-size--h3);
     line-height: #{$line-height--h3}px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @media #{$mobile-down} {
         @include font-size($s-font-size--h3);
@@ -74,7 +74,7 @@
 @mixin button {
     @include font-size($font-size--button);
     line-height: #{$line-height--button}px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     @media #{$mobile-down} {
         @include font-size($s-font-size--button);

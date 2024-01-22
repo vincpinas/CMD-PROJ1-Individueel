@@ -60,8 +60,7 @@ ul {
     margin: 0;
 }
 
-body,
-html {
+body {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,6 +75,11 @@ html {
         color: $brown;
     }
 
+    button {
+        cursor: pointer;
+        @include no-select;
+    }
+
     button,
     a,
     input,
@@ -83,6 +87,7 @@ html {
         @include font--primary();
         @include input;
     }
+
     
     h1 {
         @include font--primary();

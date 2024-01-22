@@ -20,10 +20,10 @@ const heart_svg = `<svg width="89" height="89" viewBox="0 0 89 89" fill="none" x
 
 const tips_content = [
     ` <li>
-        <span>
+        <div>
             <h3>Oud brood weer lekker maken</h3>
             <button>${heart_svg}</button>
-        </span>
+        </div>
         <ol>
             <li>
                 <p>Was je handen</p>
@@ -53,15 +53,14 @@ const tips_content = [
     </li>`,
     // ---------------------------
     `<li>
-    <span>
+    <div>
         <h3>Gebruik too good to go</h3>
         <button>${heart_svg}</button>
-    </span>
+    </div>
     <p><a href="https://www.toogoodtogo.com/nl/" target="_blank">Too good to go</a> is een gratis app beschikbaar voor iOS en Android die voedsel verspilling probeert tegen te gaan. Na een account aan te maken kun je je address invullen en dan zal de app automatisch voor de dichtsbijzijnde winkels zoeken die hier aan mee doen. Je kan dan tegen een lage prijs een voedsel pakket bestellen en deze ophalen bij de winkel waar je hem gereserveerd heb.
         Zo kun je goedkoop boodschappen doen en tegelijkertijd in de strijd tegen voedselverspilling helpen.</p>
     </li>`,
     // ---------------------------
-    ``,
 ]
 
 export {

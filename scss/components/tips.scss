@@ -32,7 +32,7 @@ $card-padding: 0.75rem;
         margin-left: 1em; 
     }
 
-    & > ul > li {
+    & > ul > li:not(.info) {
         box-shadow: $box-shadow--primary;
         background: $green;
         color: $beige;
@@ -41,29 +41,29 @@ $card-padding: 0.75rem;
         width: 100%;
         margin-bottom: 1rem;
 
-        & > span {
+        & > div {
             display: flex;
             width: 100%;
         }
 
-        & > span button {
+        & > div button {
             margin-left: auto;
             width: fit-content;
             margin-bottom: 0;
         }
         
-        & > span button svg {
+        & > div button svg {
             max-width: 2rem;
             height: fit-content;
         }
 
-        & > span button path {
+        & > div button path {
             fill: $beige;
             stroke: darken($beige, $amount: 10%);
             transition: $transition-fast;
         }
 
-        & > span button.active path {
+        & > div button.active path {
             fill: lighten($light-green, 5%);
             stroke: $light-green;
         }
@@ -85,6 +85,11 @@ $card-padding: 0.75rem;
 
 #tips-random {
     margin-bottom: 1.5rem;
+
+    .info h3 {
+        text-align: center;
+        color: $dark-brown;
+    }
 }
 
 #tips-favorite {

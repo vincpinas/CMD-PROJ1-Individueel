@@ -143,7 +143,7 @@ header > nav ul li:first-of-type {
   list-style-position: outside;
   margin-left: 1em;
 }
-#p-tips .tips > ul > li {
+#p-tips .tips > ul > li:not(.info) {
   box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.48);
   background: #3D563B;
   color: #FFE1B7;
@@ -152,25 +152,25 @@ header > nav ul li:first-of-type {
   width: 100%;
   margin-bottom: 1rem;
 }
-#p-tips .tips > ul > li > span {
+#p-tips .tips > ul > li:not(.info) > div {
   display: flex;
   width: 100%;
 }
-#p-tips .tips > ul > li > span button {
+#p-tips .tips > ul > li:not(.info) > div button {
   margin-left: auto;
   width: fit-content;
   margin-bottom: 0;
 }
-#p-tips .tips > ul > li > span button svg {
+#p-tips .tips > ul > li:not(.info) > div button svg {
   max-width: 2rem;
   height: fit-content;
 }
-#p-tips .tips > ul > li > span button path {
+#p-tips .tips > ul > li:not(.info) > div button path {
   fill: #FFE1B7;
   stroke: #ffcc84;
   transition: 0.35s;
 }
-#p-tips .tips > ul > li > span button.active path {
+#p-tips .tips > ul > li:not(.info) > div button.active path {
   fill: #6f9e79;
   stroke: #62926C;
 }
@@ -187,6 +187,10 @@ header > nav ul li:first-of-type {
 
 #tips-random {
   margin-bottom: 1.5rem;
+}
+#tips-random .info h3 {
+  text-align: center;
+  color: #301D0D;
 }
 
 /* Any imports required multiple times across the site will be imported here. */
@@ -236,32 +240,34 @@ ul {
   margin: 0;
 }
 
-body,
-html {
+body {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   background: #FFE1B7;
 }
-body ol,
-html ol {
+body ol {
   font-family: "Quicksand";
   font-weight: 800;
   font-style: normal;
 }
-body a,
-html a {
+body a {
   color: #452913;
+}
+body button {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 body button,
 body a,
 body input,
-body select,
-html button,
-html a,
-html input,
-html select {
+body select {
   font-family: "Altone Bold";
   font-weight: 800;
   font-style: normal;
@@ -273,68 +279,57 @@ html select {
   body button,
   body a,
   body input,
-  body select,
-  html button,
-  html a,
-  html input,
-  html select {
+  body select {
     font-size: 12px;
     line-height: 18px;
   }
 }
-body h1,
-html h1 {
+body h1 {
   font-family: "Altone Bold";
   font-weight: 800;
   font-style: normal;
   font-size: 42px;
   line-height: 48px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #301D0D;
 }
 @media screen and (max-width: 767px) {
-  body h1,
-  html h1 {
+  body h1 {
     font-size: 30px;
     line-height: 33px;
   }
 }
-body h2,
-html h2 {
+body h2 {
   font-family: "Altone Bold";
   font-weight: 800;
   font-style: normal;
   font-size: 34px;
   line-height: 36px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #301D0D;
 }
 @media screen and (max-width: 767px) {
-  body h2,
-  html h2 {
+  body h2 {
     font-size: 16px;
     line-height: 28px;
   }
 }
-body h3,
-html h3 {
+body h3 {
   font-family: "Altone Bold";
   font-weight: 800;
   font-style: normal;
   font-size: 26px;
   line-height: 28px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #301D0D;
 }
 @media screen and (max-width: 767px) {
-  body h3,
-  html h3 {
+  body h3 {
     font-size: 19px;
     line-height: 28px;
   }
 }
-body h4,
-html h4 {
+body h4 {
   font-family: "Altone Bold";
   font-weight: 800;
   font-style: normal;
@@ -344,14 +339,12 @@ html h4 {
   color: #301D0D;
 }
 @media screen and (max-width: 767px) {
-  body h4,
-  html h4 {
+  body h4 {
     font-size: 14px;
     line-height: 24px;
   }
 }
-body p,
-html p {
+body p {
   font-family: "Quicksand";
   font-weight: 800;
   font-style: normal;
@@ -361,14 +354,12 @@ html p {
   color: #452913;
 }
 @media screen and (max-width: 767px) {
-  body p,
-  html p {
+  body p {
     font-size: 12px;
     line-height: 18px;
   }
 }
-body label,
-html label {
+body label {
   font-family: "Quicksand";
   font-weight: 800;
   font-style: normal;
@@ -378,8 +369,7 @@ html label {
   color: #452913;
 }
 @media screen and (max-width: 767px) {
-  body label,
-  html label {
+  body label {
     font-size: 12px;
     line-height: 16px;
   }
