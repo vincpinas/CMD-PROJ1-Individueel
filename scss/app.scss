@@ -7,14 +7,7 @@
 @import "components/winkels.scss";
 
 /* Any imports required multiple times across the site will be imported here. */
-@font-face {
-    font-family: 'Quicksand';
-    src: url('../fonts/Quicksand/QuicksandBook-Regular.woff2') format('woff2'),
-        url('../fonts/Quicksand/QuicksandBook-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 @font-face {
     font-family: 'Altone';
@@ -135,6 +128,10 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+.-bold {
+    font-weight: 700;
 }
 
 #eQTlWSRvAGI6_to { 

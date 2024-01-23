@@ -12,7 +12,7 @@ class Faq {
         faq_content.forEach((paragraph, index)=> {
             const li = document.createElement("li"),
             h2 = document.createElement("h2"),
-            p = document.createElement("p"),
+            article = document.createElement("article"),
             span = document.createElement("span")
 
             this.state[index] = false
@@ -22,10 +22,10 @@ class Faq {
             h2.appendChild(span)
             h2.innerHTML = h2.innerHTML + paragraph.title
 
-            p.innerHTML = paragraph.p;
+            article.innerHTML = paragraph.html;
 
             li.appendChild(h2)
-            li.appendChild(p)
+            li.appendChild(article)
 
             li.addEventListener("click", () => {
                 this.state[index] ? this.state[index] = false : this.state[index] = true;

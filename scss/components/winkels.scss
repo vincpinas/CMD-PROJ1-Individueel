@@ -17,10 +17,25 @@
             margin: 0;
         }
 
-        &>img {
-            width: 6rem;
-            height: 6rem;
-            border-radius: 5px;
+        span {
+            position: relative;
+
+            &>img:nth-of-type(1) {
+                position: absolute;
+                width: 8.5rem;
+                height: 8.5rem;
+                transform: translateX(-1rem) translateY(-1rem);
+            }
+
+            &>img:nth-of-type(2) {
+                width: 6rem;
+                height: 6rem;
+                border-radius: 5px;
+            }
+        }
+
+        &:nth-of-type(even) span > img {
+            margin-left: 0.5rem;
         }
 
         p {
@@ -31,7 +46,7 @@
     li:nth-of-type(odd) {
         flex-direction: row;
 
-        &>img {
+        &>span {
             margin-right: 0.5rem;
         }
     }

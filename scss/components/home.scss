@@ -67,18 +67,34 @@
             cursor: pointer;
         }
 
-        p {
+        article {
             max-width: 95%;
             margin-left: 1.4rem;
         }
 
-        p a {
+        article a {
             margin: 0;
             width: fit-content;
         }
 
-        li {
+        blockquote{
+            padding-bottom: 1rem;
+
             p {
+                margin-bottom: 0;
+            }
+
+            cite {
+                @include paragraph;
+                @include font--secondary();
+                color: $brown;
+                font-weight: 700;
+                font-style: italic;
+            }
+        }
+
+        li {
+            article {
                 display: none;
                 opacity: 0;
             }
@@ -89,7 +105,7 @@
         }
 
         li.active {
-            p {
+            article {
                 display: inline-block;
                 opacity: 1;
             }

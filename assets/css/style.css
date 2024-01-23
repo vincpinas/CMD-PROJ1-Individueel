@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -21,7 +22,7 @@ header > nav ul {
 }
 header > nav ul li a {
   color: #FFE1B7;
-  font-size: 14px;
+  font-size: 16px;
   transition: 0.35s;
 }
 header > nav ul li a:hover {
@@ -94,22 +95,45 @@ header > nav ul li:first-of-type {
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
-#p-home .faq p {
+#p-home .faq article {
   max-width: 95%;
   margin-left: 1.4rem;
 }
-#p-home .faq p a {
+#p-home .faq article a {
   margin: 0;
   width: fit-content;
 }
-#p-home .faq li p {
+#p-home .faq blockquote {
+  padding-bottom: 1rem;
+}
+#p-home .faq blockquote p {
+  margin-bottom: 0;
+}
+#p-home .faq blockquote cite {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 1rem;
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-style: normal;
+  color: #452913;
+  font-weight: 700;
+  font-style: italic;
+}
+@media screen and (max-width: 767px) {
+  #p-home .faq blockquote cite {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+#p-home .faq li article {
   display: none;
   opacity: 0;
 }
 #p-home .faq li span {
   transform: rotate(0deg);
 }
-#p-home .faq li.active p {
+#p-home .faq li.active article {
   display: inline-block;
   opacity: 1;
 }
@@ -211,10 +235,22 @@ header > nav ul li:first-of-type {
 #p-winkels > section > ul li h3 {
   margin: 0;
 }
-#p-winkels > section > ul li > img {
+#p-winkels > section > ul li span {
+  position: relative;
+}
+#p-winkels > section > ul li span > img:nth-of-type(1) {
+  position: absolute;
+  width: 8.5rem;
+  height: 8.5rem;
+  transform: translateX(-1rem) translateY(-1rem);
+}
+#p-winkels > section > ul li span > img:nth-of-type(2) {
   width: 6rem;
   height: 6rem;
   border-radius: 5px;
+}
+#p-winkels > section > ul li:nth-of-type(even) span > img {
+  margin-left: 0.5rem;
 }
 #p-winkels > section > ul li p {
   margin: 0;
@@ -222,7 +258,7 @@ header > nav ul li:first-of-type {
 #p-winkels > section > ul li:nth-of-type(odd) {
   flex-direction: row;
 }
-#p-winkels > section > ul li:nth-of-type(odd) > img {
+#p-winkels > section > ul li:nth-of-type(odd) > span {
   margin-right: 0.5rem;
 }
 #p-winkels > section > ul li > div {
@@ -234,13 +270,6 @@ header > nav ul li:first-of-type {
 }
 
 /* Any imports required multiple times across the site will be imported here. */
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand/QuicksandBook-Regular.woff2") format("woff2"), url("../fonts/Quicksand/QuicksandBook-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 @font-face {
   font-family: "Altone";
   src: url("../fonts/Altone/AltoneTrial-Regular.woff2") format("woff2"), url("../fonts/Altone/AltoneTrial-Regular.woff") format("woff");
@@ -289,7 +318,7 @@ body {
 }
 body ol {
   font-family: "Quicksand";
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
 }
 body a {
@@ -386,7 +415,7 @@ body h4 {
 }
 body p {
   font-family: "Quicksand";
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
   font-size: 16px;
   line-height: 28px;
@@ -395,13 +424,13 @@ body p {
 }
 @media screen and (max-width: 767px) {
   body p {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 18px;
   }
 }
 body label {
   font-family: "Quicksand";
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
@@ -422,6 +451,10 @@ body label {
 }
 .-scrollx::-webkit-scrollbar {
   display: none;
+}
+
+.-bold {
+  font-weight: 700;
 }
 
 #eQTlWSRvAGI6_to {

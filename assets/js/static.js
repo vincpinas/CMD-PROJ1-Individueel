@@ -1,15 +1,20 @@
 const faq_content = [
     {
         title: "Wat is duurzaam eten?",
-        p: "Duurzaam eten gaat over het maken van milieuvriendelijke, economisch slimme en eerlijke keuzes als het gaat om ons voedsel. Het betekent bijvoorbeeld dat we biologische landbouw steunen, lokaal voedsel kiezen en dieren op een goede manier behandelen. Het doel is om zo min mogelijk schade aan het milieu te veroorzaken. Duurzaam eten houdt ook in dat we boeren eerlijk betalen en bewuste keuzes maken als consument. Kortom, duurzaam eten is goed voor onze gezondheid en voor de planeet."
+        html: `<blockquote cite="https://www.brainyquote.com/authors/mahatma-gandhi">
+                    <p>"Earth provides enough to satisfy every man's needs, but not every man's greed."</p>
+                    <cite>- Mahatma Gandhi</cite>
+                </blockquote>
+                <br>
+                <p>Duurzaam eten gaat over het maken van <span class="-bold">milieuvriendelijke</span>, <span class="-bold">economisch slimme</span> en <span class="-bold">eerlijke</span> keuzes als het gaat om ons voedsel. Het betekent bijvoorbeeld dat we biologische landbouw steunen en dieren op een goede manier behandelen. Het doel is om zo min mogelijk schade aan het milieu te veroorzaken. Kortom, duurzaam eten is goed voor onze gezondheid en voor de planeet.</p>`
     },
     {
         title: "Wat kan ik doen om te beginnen?",
-        p: "Als je wilt beginnen met duurzaam eten is een simpele eerste stap om bewust te zijn van de hoeveelheid producten die je koopt. Koop alleen producten die je nodig hebt en waarvan je weet dat je ze zal eten voordat je een reden hebt om het weg te gooien."
+        html: "<p>Als je wilt beginnen met duurzaam eten is een simpele eerste stap om bewust te zijn van de hoeveelheid producten die je koopt. Koop alleen producten die je nodig hebt en waarvan je weet dat je ze zal eten voordat je een reden hebt om het weg te gooien.</p>"
     },
     {
         title: "Waar kan ik meer vinden over duurzaam eten?",
-        p: `Als je meer wilt weten over duurzaam eten buiten de content die beschikbaar is op deze website kun je een kijkje nemen op de website van <a href="https://www.voedingscentrum.nl/" target="_blank">Voeding Centrum</a>. Ze stellen hier veel hoge kwaliteit posts beschikbaar over eten in het algemeen.`
+        html: `<p>Als je meer wilt weten over duurzaam eten buiten de content die beschikbaar is op deze website kun je een kijkje nemen op de website van <a href="https://www.voedingscentrum.nl/" target="_blank">Voeding Centrum</a>. Ze stellen hier veel hoge kwaliteit posts beschikbaar over eten in het algemeen.</p>`
     },
 ]
 
