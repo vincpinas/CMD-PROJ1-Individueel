@@ -242,7 +242,7 @@ header > nav ul li:first-of-type {
   position: absolute;
   width: 8.5rem;
   height: 8.5rem;
-  transform: translateX(-1rem) translateY(-1rem);
+  transform: translateX(-1.2rem) translateY(-1rem);
 }
 #p-winkels > section > ul li span > img:nth-of-type(2) {
   width: 6rem;
@@ -264,7 +264,8 @@ header > nav ul li:first-of-type {
 #p-winkels > section > ul li > div {
   display: flex;
   flex-direction: column;
-  height: 6rem;
+  height: 6.15rem;
+  justify-content: center;
   text-overflow: ellipsis;
   overflow: hidden;
 }

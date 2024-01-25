@@ -24,7 +24,7 @@
                 position: absolute;
                 width: 8.5rem;
                 height: 8.5rem;
-                transform: translateX(-1rem) translateY(-1rem);
+                transform: translateX(-1.2rem) translateY(-1rem);
             }
 
             &>img:nth-of-type(2) {
@@ -54,7 +54,8 @@
     li>div {
         display: flex;
         flex-direction: column;
-        height: 6rem;
+        height: 6.15rem;
+        justify-content: center;
         text-overflow: ellipsis;
         overflow: hidden;
     }
